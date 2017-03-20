@@ -2,10 +2,7 @@ import tweepy, time, sys
 import random, itertools
 import words
 
-CONSUMER_KEY = 'PY4HS7qVmAByZG6aKm2a1gxAH'
-CONSUMER_SECRET = 'ugmoH8FyFUywIsP4VVWnKjDORPlrki3AhUPyIbgWA5BnGAnuC9'
-ACCESS_KEY = '842767953917624322-Mps97VLNi8y8WrYnyFuVpMEvRb6HzRa'
-ACCESS_SECRET = '3QhXXQTt7CU5bQsOEpNJnyB81KJfXuawzTlwkNc5s6OZq'
+
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
