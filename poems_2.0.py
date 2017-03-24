@@ -23,6 +23,7 @@ things_word = 0
 wheather_word = 0
 ly_word = 0
 prepositions_word = 0
+descriptive_words = 0
 fuckyoupython = 0
 line = 0
 
@@ -39,10 +40,11 @@ def choosing_words():
 	global ly_word
 	global prepositions_word
 	global fuckyoupython
+	global descriptive
 
 	verbs = (words.base, words.past_Participle, words.past_Simple)
 	adverbs = (words.adverbs_of_Quantity, words.adverbs_of_Cause, words.adverbs_of_Place, words.adverbs_of_Time)
-	things = (words.body, words.animals, words.buildings, words.clothes, words.downtown)
+	things = (words.body, words.animals, words.clothes, words.general_words, words.picturable_words)
 	fuckyoupython = 'youfuckingfuck'
 	#verb
 	verb = random.choice(verbs)
@@ -58,13 +60,15 @@ def choosing_words():
 	#ly
 	ly_word = random.choice(words.ly)
 	#prepositions
-	prepositions_word = random.choice(words.prepositions)
+	#prepositions_word = random.choice(words.prepositions)
+	#descriptive_words
+	descriptive = random.choice(words.descriptive_words)
 
 
 def printing():
 
 
-	stuff_to_print = [verb_word, adverb_word, things_word, wheather_word, ly_word, prepositions_word]
+	stuff_to_print = [verb_word, adverb_word, things_word, wheather_word, ly_word, descriptive]
 	print(fuckyoupython)
 	for stuff in stuff_to_print:
 		print(stuff)
@@ -77,17 +81,20 @@ def phrases():
 	global line
 	lol = ''
 
-	group_of_words = [verb_word, adverb_word, things_word, wheather_word, ly_word, prepositions_word]
+	group_of_words = [verb_word, adverb_word, things_word, wheather_word, ly_word, descriptive]
 	random.shuffle(group_of_words)
 	line = random.choice(group_of_words) + '\n'
 
-	for i in range(0, len(group_of_words) -2):
-		print(i)
+	for i in range(0, len(group_of_words)-1):
+		#print(i)
+		#print("\n")
 
 		results = [x for x in itertools.combinations(group_of_words, i) ]
 		random_results = random.choice(results)
-		
-		print(random_results)
+		#print(results)
+		#print("\n")
+		#print("random_results: \n")
+		line = (' '.join(random_results) + "\n")
 		
 
 
@@ -112,7 +119,7 @@ def main():
 			choosing_words()
 			#make the sentences
 			phrases()
-			print('adding to file: ' + line)
+			#print('adding to file: ' + line)
 			filename.write(line)
 			
 		filename.close()		
@@ -131,10 +138,10 @@ def main():
 	
 
 
-choosing_words()
+#choosing_words()
 #printing()
-phrases()
-#main()
+#phrases()
+main()
 
 
 
