@@ -43,7 +43,8 @@ def choosing_words():
 	global descriptive
 
 	verbs = (words.base, words.past_Participle, words.past_Simple)
-	adverbs = (words.adverbs_of_Quantity, words.adverbs_of_Cause, words.adverbs_of_Place, words.adverbs_of_Time)
+	adverbs = (words.adverbs_usually_before_verb, words.adverbs_of_Time)
+	#adverbs = (words.adverbs_of_Quantity, words.adverbs_of_Cause, words.adverbs_of_Place, words.adverbs_of_Time)
 	things = (words.body, words.animals, words.clothes, words.general_words, words.picturable_words)
 	fuckyoupython = 'youfuckingfuck'
 	#verb
@@ -65,6 +66,7 @@ def choosing_words():
 	descriptive = random.choice(words.descriptive_words)
 
 
+
 def printing():
 
 
@@ -83,19 +85,19 @@ def phrases():
 
 	group_of_words = [verb_word, adverb_word, things_word, wheather_word, ly_word, descriptive]
 	random.shuffle(group_of_words)
-	line = random.choice(group_of_words) + '\n'
+	#line = random.choice(group_of_words) + '\n'
 
-	for i in range(0, len(group_of_words)-1):
+	#for i in range(0, len(group_of_words)-1):
 		#print(i)
 		#print("\n")
+	i = random.randrange(1,5)
+	results = [x for x in itertools.combinations(group_of_words, i) ]
+	random_results = random.choice(results)
+	#print(results)
+	#print("\n")
+	#print("random_results: \n")
+	line = (' '.join(random_results) + "\n")
 
-		results = [x for x in itertools.combinations(group_of_words, i) ]
-		random_results = random.choice(results)
-		#print(results)
-		#print("\n")
-		#print("random_results: \n")
-		line = (' '.join(random_results) + "\n")
-		
 
 
 	
@@ -132,7 +134,7 @@ def main():
 		print (tweet)
 		#api.update_status(tweet)
 
-		time.sleep(300)
+		time.sleep(1)
 
 	
 	
