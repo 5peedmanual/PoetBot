@@ -1,21 +1,8 @@
 import  time, sys
 import random, itertools
 import words
-#import  tweepy
-
-"""
-######################################### Tweeting ##############################################
 
 
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
-api = tweepy.API(auth)
-
-################################################################################################
-"""
-
-
-random_number = random.randrange(1,3)
 
 verb_word = 0
 adverb_word = 0
@@ -24,12 +11,7 @@ wheather_word = 0
 ly_word = 0
 prepositions_word = 0
 descriptive_words = 0
-fuckyoupython = 0
 line = 0
-
-
-
-
 
 def choosing_words():
 
@@ -41,12 +23,14 @@ def choosing_words():
 	global prepositions_word
 	global fuckyoupython
 	global descriptive
-
+	
+	#######GROUP
 	verbs = (words.base, words.past_Participle, words.past_Simple)
 	adverbs = (words.adverbs_usually_before_verb, words.adverbs_of_Time)
 	#adverbs = (words.adverbs_of_Quantity, words.adverbs_of_Cause, words.adverbs_of_Place, words.adverbs_of_Time)
 	things = (words.body, words.animals, words.clothes, words.general_words, words.picturable_words)
-	fuckyoupython = 'youfuckingfuck'
+	
+	#######CHOOSE
 	#verb
 	verb = random.choice(verbs)
 	verb_word = random.choice(verb)
@@ -66,22 +50,17 @@ def choosing_words():
 	descriptive = random.choice(words.descriptive_words)
 
 
-
 def printing():
-
-
+	
 	stuff_to_print = [verb_word, adverb_word, things_word, wheather_word, ly_word, descriptive]
 	print(fuckyoupython)
 	for stuff in stuff_to_print:
 		print(stuff)
 
 
-
-
-
 def phrases():
+	
 	global line
-	lol = ''
 
 	group_of_words = [verb_word, adverb_word, things_word, wheather_word, ly_word, descriptive]
 	random.shuffle(group_of_words)
@@ -97,17 +76,6 @@ def phrases():
 	#print("\n")
 	#print("random_results: \n")
 	line = (' '.join(random_results) + "\n")
-
-
-
-	
-	
-
-
-	
-
- 
-
 
 
 def main():
@@ -126,7 +94,6 @@ def main():
 			
 		filename.close()		
 		
-
 		filename=open('test.txt','r')
 		f=filename.readlines()
 		filename.close()
