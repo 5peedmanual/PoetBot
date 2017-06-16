@@ -28,7 +28,8 @@ def choosing_words():
 	verbs = (words.base, words.past_Participle, words.past_Simple)
 	adverbs = (words.adverbs_usually_before_verb, words.adverbs_of_Time)
 	#adverbs = (words.adverbs_of_Quantity, words.adverbs_of_Cause, words.adverbs_of_Place, words.adverbs_of_Time)
-	things = (words.body, words.animals, words.clothes, words.general_words, words.picturable_words)
+	things = (words.body, words.animals, words.clothes, words.general_words, words.picturable_words, words.imaginary_words, words.qualities_words)
+
 	
 	#######CHOOSE
 	#verb
@@ -78,7 +79,12 @@ def phrases():
 	line = (' '.join(random_results) + "\n")
 
 
-def main():
+if __name__ == '__main__':
+	parser = argparse.ArgumentParser(description='Shit poster bot for twitter')
+	#parser.add_argument('-l', help='number of text lines (default 1)', type=int)
+	parser.add_argument('-t, help='time for sleep in seconds (default 300)', type=int)
+	args = parser.parse_args()
+	t = args.t
 	
 	while True:
 
@@ -101,16 +107,11 @@ def main():
 		print (tweet)
 		#api.update_status(tweet)
 
-		time.sleep(1)
+		time.sleep(t)
 
 	
 	
 
-
-#choosing_words()
-#printing()
-#phrases()
-main()
 
 
 
