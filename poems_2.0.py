@@ -21,14 +21,13 @@ def choosing_words():
 	global wheather_word
 	global ly_word
 	global prepositions_word
-	global fuckyoupython
 	global descriptive
 	
 	#######GROUP
 	verbs = (words.base, words.past_Participle, words.past_Simple)
 	adverbs = (words.adverbs_usually_before_verb, words.adverbs_of_Time)
 	#adverbs = (words.adverbs_of_Quantity, words.adverbs_of_Cause, words.adverbs_of_Place, words.adverbs_of_Time)
-	things = (words.body, words.animals, words.clothes, words.general_words, words.picturable_words, words.imaginary_words, words.qualities_words)
+	things = (words.body, words.animals, words.clothes, words.general_words, words.picturable_words, words.imaginary, words.qualities)
 
 	
 	#######CHOOSE
@@ -54,7 +53,6 @@ def choosing_words():
 def printing():
 	
 	stuff_to_print = [verb_word, adverb_word, things_word, wheather_word, ly_word, descriptive]
-	print(fuckyoupython)
 	for stuff in stuff_to_print:
 		print(stuff)
 
