@@ -35,7 +35,6 @@ def choosing_words():
 	verbs = (words.base, words.past_Participle, words.past_Simple)
 	adverbs = (words.adverbs_of_Quantity, words.adverbs_of_Cause, words.adverbs_of_Place, words.adverbs_of_Time)
 	things = (words.body, words.animals, words.buildings, words.clothes, words.downtown)
-	fuckyoupython = 'youfuckingfuck'
 	#verb
 	verb = random.choice(verbs)
 	verb_word = random.choice(verb)
@@ -110,18 +109,6 @@ def main():
 		time.sleep(900)
 
 	
-	
-
-
-
 
 main()
-
-
-
- 
-
-
-
-
 
