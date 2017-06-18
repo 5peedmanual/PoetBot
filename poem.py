@@ -23,25 +23,29 @@ def choosing_words():
 	global prepositions_word
 	global descriptive
 	
-	#######GROUP
+	
+        # Take from dictionary
+
 	verbs = (words.base, words.past_Participle, words.past_Simple)
-	adverbs = (words.adverbs_usually_before_verb, words.adverbs_of_Time)
-	#adverbs = (words.adverbs_of_Quantity, words.adverbs_of_Cause, words.adverbs_of_Place, words.adverbs_of_Time)
-	things = (words.body, words.animals, words.clothes, words.general_words, words.picturable_words, words.imaginary, words.qualities)
+	
+        adverbs = (words.adverbs_usually_before_verb, words.adverbs_of_Time, words.adverbs_of_Quantity, words.adverbs_of_Cause, words.adverbs_of_Place)
+	
+        nouns = (words.weather, words.body, words.animals, words.clothes, words.general_words, words.picturable_words, words.imaginary, words.qualities)
 
 	
-	#######CHOOSE
-	#verb
+	# Choose
+
+	# Verb
 	verb = random.choice(verbs)
 	verb_word = random.choice(verb)
-	#adverb
+	# Adverb
 	adverb = random.choice(adverbs)
 	adverb_word = random.choice(adverb)
-	#things
-	thing = random.choice(things)
-	things_word = random.choice(thing)
+	# Noun
+	noun = random.choice(nouns)
+	noun_word = random.choice(noun)
 	#weather
-	wheather_word = random.choice(words.weather)
+	#wheather_word = random.choice(words.weather)
 	#ly
 	ly_word = random.choice(words.ly)
 	#prepositions
@@ -49,12 +53,6 @@ def choosing_words():
 	#descriptive_words
 	descriptive = random.choice(words.descriptive_words)
 
-
-def printing():
-	
-	stuff_to_print = [verb_word, adverb_word, things_word, wheather_word, ly_word, descriptive]
-	for stuff in stuff_to_print:
-		print(stuff)
 
 
 def phrases():
