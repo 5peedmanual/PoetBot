@@ -80,7 +80,7 @@ def phrases():
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='Shit poster bot for twitter')
 	#parser.add_argument('-l', help='number of text lines (default 1)', type=int)
-	parser.add_argument('-t, help='time for sleep in seconds (default 300)', type=int)
+	parser.add_argument('-t', help='time for sleep in seconds (default 300)', type=int)
 	args = parser.parse_args()
 	t = args.t
 	
