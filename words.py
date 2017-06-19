@@ -22,7 +22,7 @@ qualities = ['able', 'acid', 'angry', 'automatic', 'awake', 'bad', 'beautiful', 
 poss = ['I', 'me', 'my', 'You', 'you', 'your', 'He', 'him', 'his', 'She', 'her', 'It', 'its', 'We', 'us', 'our', 'They', 'them', 'their']
 
 
-ly = ['abruptly', '', 'firmly', 'sorrowfully', 'teaspoonful', 'mouthful', 'painful', 'cupful', 'careful', 'helpful', 'boastful', 'handful', 'dreadful', 'mournful', '', 'harmful', 'lawful', 'playful', 'powerful', 'colorful', 'shameful', 'useful', 'doubtful', 'graceful', 'tearful', 'bountiful', 'awful', 'rightful', 'spoonful', 'thoughtful', 'careless', 'colorless', 'doubtless', 'endles', 'endless', 'fearless', 'helpless', 'homeless', 'hopeless', 'lifeless', '', 'restless', 'senseless', 'sightless', 'tasteless', 'useless']
+ly = ['abruptly', '', 'firmly', 'sorrowfully', 'teaspoonful', 'mouthful', 'painful', 'cupful', 'careful', 'helpful', 'boastful', 'handful', 'dreadful', 'mournful', '', 'harmful', 'lawful', 'playful', 'powerful', 'colorful', 'shameful', 'useful', 'doubtful', 'graceful', 'tearful', 'bountiful', 'awful', 'rightful', 'spoonful', 'thoughtful', 'careless', 'colorless', 'doubtless', 'endless', 'fearless', 'helpless', 'homeless', 'hopeless', 'lifeless', '', 'restless', 'senseless', 'sightless', 'tasteless', 'useless']
 
 prepositions = ['above', 'alongside of', 'around', 'at', 'away from', 'behind', 'beneath', 'by', 'down', 'far', 'in', 'inside', 'into', 'about', 'against', 'along', 'among', 'as', 'at', 'beneath', 'beside', 'besides', 'between', 'by', 'double', 'down', 'during', 'except', 'from', 'into', 'of', 'onto', 'over', 'plus', 'since', 'throughout', 'upon', 'with', 'without', 'per', 'alongside', 'despite', 'versus', 'via', 'for']
 
