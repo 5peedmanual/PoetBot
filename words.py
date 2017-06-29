@@ -69,10 +69,11 @@ prepositions = ['above',  'around', 'at', 'away from','alongside of', 'behind', 
 
 
 
-articles = ['the', 'a', 'an']
-
+articles = ['that','the', 'a', 'an']
+articlenota = ['that','the','an']
+by = ['them', 'him', 'her', 'us', 'me']
 # These take the place of common and proper nouns
-personal_pronouns = ['I', 'me', 'we', 'us', 'you', 'she', 'her', 'he', 'him', 'it', 'they', 'them']
+personal_pronouns = ['I', 'we', 'you', 'she', 'he', 'it', 'they' ]
 # These relate subordinate adjective clauses to the rest of the sentence
 relative_pronouns = ['that', 'which', 'who', 'whom', 'whose', 'whichever', 'whoever', 'whomever']
 # These represent a thing or things
@@ -83,11 +84,10 @@ indefinite_pronouns = ['anybody', 'anyone', 'anything', 'each', 'either', 'every
 reflexive_pronouns = ['myself', 'ourselves', 'yourself', 'yourselves', 'himself', 'herself', 'itself', 'themselves']
 # These are used to ask questions.
 interrogative_pronouns = ['what', 'who', 'which', 'whom', 'whose']
-possessive_pronouns = ['I', 'me', 'my', 'You', 'you', 'you\'re', 'your', 'He', 'him', 'his', 'She', 'her', 'It', 'its', 'We', 'us', 'our', 'They', 'them', 'their']
+possessive_pronouns = ['I', 'me', 'my', 'You', 'you', 'you\'re', 'your', 'He', 'him', 'his', 'She', 'her', 'It', 'its', 'We', 'us', 'our', 'They', 'their']
 
 interjections = ['aha', 'ahem', 'ahh', 'ahoy', 'alas', 'arg', 'aw', 'bam', 'bingo', 'blah', 'boo', 'bravo', 'brrr', 'cheers', 'congratulations', 'dang', 'drat', 'darn', 'duh', 'eek', 'eh', 'encore', 'eureka', 'fiddlesticks', 'gadzooks', 'gee', 'gee', 'whiz', 'golly', 'goodbye', 'goodness', 'good', 'grief', 'gosh', 'ha-ha', 'hallelujah', 'hello', 'hey', 'hmm', 'holy', 'buckets', 'holy cow', 'holy smokes', 'hot dog', 'huh', 'humph', 'hurray', 'oh', 'oh dear', 'oh my', 'oh well', 'oops', 'ouch', 'ow', 'phew', 'phooey', 'pooh', 'pow', 'rats', 'shh', 'shoo', 'thanks', 'there', 'tut-tut', 'uh-huh', 'uh-oh', 'ugh', 'wahoo', 'well', 'whoa', 'whoops', 'wow', 'yeah', 'yes', 'yikes', 'yippee', 'yo', 'yuck']
-
-
+dont_break = ['after', 'although', 'and', 'as', 'as far as', 'as if', 'as long as', 'as soon as', 'as though', 'as well as', 'because', 'before', 'but', 'by the time', 'even if', 'even though', 'for', 'how', 'if', 'in as much as', 'in case', 'if only', 'in addition to', 'in order that', 'just as', 'lest', 'no matter how', 'nor', 'now that', 'once', 'only if', 'or', 'provided that', 'since', 'so', 'so that', 'supposing that', 'than', 'that', 'though', 'till', 'unless', 'until', 'when', 'whenever', 'where', 'whereas', 'wherever', 'whether', 'while', 'yet']
 # Remember, a clause is a group of related words containing a subject and a verb. A clause comes in four types; independent, dependent, 
 # relative or noun clause. Every clause has at least a subject and a verb. An independent clause, also called a main clause, is a clause 
 # that can stand on its own.
