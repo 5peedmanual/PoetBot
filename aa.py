@@ -66,21 +66,143 @@ def choosing_words():
 # A cataphoric it - *It* was known by everyone that he had traveled the world
 
 
-def subject(pronoun):
+def subject_phrase(w):
     phrase = []
     start = randrange(0,100)
-    number = randrange(0,10)
+    randnum = randrange(1,7)
+    randnumtwo = randrange(1,10)
     if start > 90:
         phrase.append(choice(words.interjections))
+    if start < 10:
+        phrase.append(choice(words.dont_break))
 
-    if 1:
+    if randnum == 1:
         phrase.append(choice(words.personal_pronouns))
-    elif 2:
+        # qualify himself or someone
+
+        if randnumtwo == 1:
+            phrase.append(w[4])
+            phrase.append(w[5])
+        elif randnumtwo == 2:
+            phrase.append(w[3])
+            phrase.append(w[5])
+        elif randnumtwo == 3:
+            phrase.append(w[4])
+            phrase.append(w[3])
+            phrase.append(w[5])
+        elif randnumtwo == 4:
+            phrase.append(w[5])    
+        else:
+            pass
+    
+
+    elif randnum == 2:
+        # 'this', 'these', 'that', 'those's
         phrase.append(choice(words.demonstrative_pronouns))
-    elif 3:
+        # qualify something
+        if randnumtwo == 1:
+            phrase.append(w[5])
+        elif randnumtwo == 2:
+            phrase.append(w[3])
+            phrase.append(w[5])
+        else:
+            pass
+
+
+    elif randnum == 3:
+        # 'anybody', 'anyone', 'anything', 'each' (...)
         phrase.append(choice(words.indefinite_pronouns))
-    elif 4:
-        phrase.append(choice(words.reflexive_pronouns)) 
+
+        if randnumtwo == 2:
+            phrase.append(adverb)
+
+    elif randnum == 4:
+        phrase.append(choice(words.reflexive_pronouns))
+    elif randnum == 5:
+        phrase.append(choice(words.possessive_pronouns))
+        # append auxiliar be
+    elif randnum == 6:
+        phrase.append(choice(words.interrogative_pronouns))
+        if randnumtwo == 1:
+            phrase.append(choice(words.auxiliar_be))
+            phrase.append(choice(words.auxiliar_be))
+        elif randnumtwo == 2:
+            phrase.append(choice(words.auxiliar_have))
+        if randnumtwo == 3:
+            phrase.append(choice(words.do))
+    else:
+        pass
+
+
+    # Continue 
+    #print phrase
+    return phrase
+    #call_for_verb_function(subject_phrase)
+
+
+def adjective_phrase(w):
+    #  Adj + PP -> P + N  Angry with.you
+    #  A + P + M 
+    #  Adv + A  Too happy
+    ap = []
+    randnum = randrange(0,2)     
+    randnumtwo = randrange(0,1)
+    extent_of_action = ['Very', 'Too', 'Almost', 'Also', 'Only', 'Enough', 'So', 'Quite', 'Almost', 'Rather ']
+    adjective = choice(words.adjectives)
+    preposition = choice(words.prepositions)
+
+    # Adjective + PP
+    if randnum == 1:
+        if randnumtwo == 1:
+            ap.append(adjective)
+            ap.append(preposition)
+            ap.append(w[5])
+        else:
+            ap.append(adjective)
+            ap.append(preposition)
+            ap.append(w[4])
+            ap.append(w[5])
+
+
+    elif randnum == 2:
+        # Adv + A
+        if randnumtwo == 1:
+            ap.append(extent_of_action)
+            ap.append(adjective)
+
+        # Adv + A + N
+        else:
+            ap.append(extent_of_action)
+            ap.append(adjective)
+            ap.append(w[5])
+    else:
+        pass
+
+    return ap
+
+def verb_phrase(w):
+    # Helping verb + Main verb
+    #    could     +   eat
+    #    might     +   listen
+    vp = []
+    randnum = randrange(0,2)     
+    randnumtwo = randrange(0,1)
+    help_verb = choice(words.modal_verbs)
+    main_pr = choice(words.base)
+    main_ps = choice(words.past_Simple)
+    main_pp = choice(words.past_Participle)
+
+    if randnum == 1:
+        vp.append(help_verb)
+        vp.append(w[1])
+
+    elif randnum == 2:
+        vp.append(w[1])
+
+    else:
+        pass
+    return vp
+
 
 
 
@@ -97,40 +219,15 @@ def phrases(w):
         adjective = w[3]
         article = w[4]
         noun = w[5]
-        for i in w:
-            print i
-        print('article ' + article)
+        subject = subject_phrase(w)
+        adjective = adjective_phrase(w)
+        verb = verb_phrase(w)
+        print(subject)
+        print(adjective)
+        print(verb)
+        print('\n')
 
-        if ((article == 'a') and (noun[:1] == 'a' or 'e' or 'i' or 'o' or 'u')):
-            print('changing..')
-            article == choice(words.articlenota)
-            print('new article ' + article)
-        elif ((article == 'an') and (noun[:1] != 'a' or 'e' or 'i' or 'o' or 'u')):
-            print('changing..')
-            article == choice(words.articlenota)
-            print('new article ' + article)
-
-
-        subject_pronoun = [pronoun, verb, article, noun]
-        subject_noun = [article, noun, verb]
-
-        number = randrange(0,2)
-        if number == 1:
-            subject_pronoun.insert(1, choice(words.adverbs_usually_before_verb))
-            subject_noun.insert(2, choice(words.adverbs_usually_before_verb))
-
-        elif number == 2:
-            subject_pronoun.insert(3, adjective)
-            subject_noun.insert(1, adjective)
-
-        else:
-            pass
-
-        final = [subject_pronoun, subject_noun]
-
-
-
-        line = (' '.join(choice(final)) + "\n").capitalize()
+        line = (' '.join(final) + "\n").capitalize()
         return line
 
 
@@ -144,21 +241,5 @@ if __name__ == '__main__':
         args = parser.parse_args()
         t = args.t
 
-        while True:
-
-                filename=open('test.txt','w')
-                for i in range(3):
-
-                    filename.write(phrases(choosing_words()))
-                    #phrases(choosing_words())
-
-                filename.close()
-
-                filename=open('test.txt','r')
-                f=filename.readlines()
-                filename.close()
-                tweet = f[0] + f[1] + f[2]
-                print (tweet)
-                #api.update_status(tweet)
-                sleep(300)
+        phrases(choosing_words())
 
