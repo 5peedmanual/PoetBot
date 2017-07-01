@@ -229,7 +229,17 @@ def phrases(w):
 
         line = (' '.join(final) + "\n").capitalize()
         return line
+"""
 
+        if ((article == 'a') and (noun[:1] == 'a' or 'e' or 'i' or 'o' or 'u')):
+            print('changing..')
+            article == choice(words.articlenota)
+            print('new article ' + article)
+        elif ((article == 'an') and (noun[:1] != 'a' or 'e' or 'i' or 'o' or 'u')):
+            print('changing..')
+            article == choice(words.articlenota)
+            print('new article ' + article)
+"""
 
 
 
